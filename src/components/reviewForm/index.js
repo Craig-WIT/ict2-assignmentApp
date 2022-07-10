@@ -9,7 +9,7 @@ import { MoviesContext } from "../../contexts/moviesContext";
 import MenuItem from "@material-ui/core/MenuItem";
 import Snackbar from "@material-ui/core/Snackbar"; 
 import MuiAlert from "@material-ui/lab/Alert";
-import {useNavigate} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom'
 
 const ratings = [
   {
@@ -62,53 +62,53 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const ReviewForm = ({ movie }) => {
-    const classes = useStyles();
-    const { register, handleSubmit, errors, reset } = useForm();
-    const context = useContext(MoviesContext);
-    const [rating, setRating] = useState(3);
-    const [open, setOpen] = useState(false);  //NEW
-    const navigate = useNavigate()          
-  
-    const handleRatingChange = (event) => {
-      setRating(event.target.value);
-    };
-  
-    const handleSnackClose = (event) => {     
-      setOpen(false);
-      navigate("/movies/favourites");
-    };
-  
-    const onSubmit = (review) => {
-      review.movieId = movie.id;
-      review.rating = rating;
-      // console.log(review);
-      context.addReview(movie, review);
-      setOpen(true);   // NEW
-    };
-  
-    return (
-      <Box component="div" className={classes.root}>
-        <Typography component="h2" variant="h3">
-          Write a review
-        </Typography>
-        {/* Start new code */}    
-        <Snackbar
-          className={classes.snack}
-          anchorOrigin={{ vertical: "top", horizontal: "right" }}
-          open={open}
+  const classes = useStyles();
+  const { register, handleSubmit, errors, reset } = useForm();
+  const context = useContext(MoviesContext);
+  const [rating, setRating] = useState(3);
+  const [open, setOpen] = useState(false);  //NEW
+  const navigate = useNavigate()          
+
+  const handleRatingChange = (event) => {
+    setRating(event.target.value);
+  };
+
+  const handleSnackClose = (event) => {     
+    setOpen(false);
+    navigate("/movies/favourites");
+  };
+
+  const onSubmit = (review) => {
+    review.movieId = movie.id;
+    review.rating = rating;
+    // console.log(review);
+    context.addReview(movie, review);
+    setOpen(true);   // NEW
+  };
+
+  return (
+    <Box component="div" className={classes.root}>
+      <Typography component="h2" variant="h3">
+        Write a review
+      </Typography>
+      {/* Start new code */}    
+      <Snackbar
+        className={classes.snack}
+        anchorOrigin={{ vertical: "top", horizontal: "right" }}
+        open={open}
+        onClose={handleSnackClose}
+      >
+        <MuiAlert
+          severity="success"
+          variant="filled"
           onClose={handleSnackClose}
         >
-          <MuiAlert
-            severity="success"
-            variant="filled"
-            onClose={handleSnackClose}
-          >
-            <Typography variant="h4">
-              Thank you for submitting a review
-            </Typography>
-          </MuiAlert>
-        </Snackbar>
-  
+          <Typography variant="h4">
+            Thank you for submitting a review
+          </Typography>
+        </MuiAlert>
+      </Snackbar>
+      {/* End new code */}
       <form
         className={classes.form}
         onSubmit={handleSubmit(onSubmit)}

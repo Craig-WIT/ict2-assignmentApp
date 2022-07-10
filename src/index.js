@@ -9,9 +9,9 @@ import MustWatchMoviesPage from "./pages/mustWatchMoviesPage";
 import MovieReviewPage from "./pages/movieReviewPage";
 import SiteHeader from './components/siteHeader'
 import { QueryClientProvider, QueryClient } from "react-query";
-import { ReactQueryDevtools } from 'react-query/devtools'
+import { ReactQueryDevtools } from 'react-query/devtools';
 import MoviesContextProvider from "./contexts/moviesContext";
-import AddMovieReviewPage from './pages/addMovieReviewPage'
+import AddMovieReviewPage from './pages/addMovieReviewPage';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -43,7 +43,7 @@ const App = () => {
         <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
         </MoviesContextProvider>
-      </BrowserRouter>
+        </BrowserRouter>
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   );
