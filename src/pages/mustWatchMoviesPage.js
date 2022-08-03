@@ -4,7 +4,7 @@ import { MoviesContext } from "../contexts/moviesContext";
 import { useQueries } from "react-query";
 import { getMovie } from "../api/tmdb-api";
 import Spinner from "../components/spinner";
-import RemoveFromFavourites from "../components/cardIcons/removeFromFavourites";
+import RemoveFromMustWatch from "../components/cardIcons/removeFromMustWatch";
 import WriteReview from "../components/cardIcons/writeReview";
 
 const MustWatchMoviesPage = () => {
@@ -40,7 +40,7 @@ const MustWatchMoviesPage = () => {
       action={(movie) => {
         return (
           <>
-            <RemoveFromFavourites movie={movie} />
+            <RemoveFromMustWatch movie={movie} />
             <WriteReview movie={movie} />
           </>
         );

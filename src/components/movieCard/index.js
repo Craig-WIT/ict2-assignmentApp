@@ -22,16 +22,26 @@ const useStyles = makeStyles({
   avatar: {
     backgroundColor: "rgb(255, 0, 0)",
   },
+  avatar2: {
+    backgroundColor: "rgb(255, 0, 0)",
+  },
 });
 
 export default function MovieCard({ movie, action }) {
   const classes = useStyles();
   const { favourites } = useContext(MoviesContext);
+  const { mustWatch } = useContext(MoviesContext);
 
   if (favourites.find((id) => id === movie.id)) {
     movie.favourite = true;
   } else {
     movie.favourite = false
+  }
+
+  if (mustWatch.find((id) => id === movie.id)) {
+    movie.mustWatch = true;
+  } else {
+    movie.mustWatch = false
   }
 
   // const handleAddToFavourite = (e) => {
@@ -46,6 +56,13 @@ export default function MovieCard({ movie, action }) {
       avatar={
         movie.favourite ? (
           <Avatar className={classes.avatar}>
+            <FavoriteIcon />
+          </Avatar>
+        ) : null
+      }
+      avatar2={
+        movie.mustWatch ? (
+          <Avatar className={classes.avatar2}>
             <FavoriteIcon />
           </Avatar>
         ) : null
