@@ -12,9 +12,11 @@ import Typography from "@material-ui/core/Typography";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import CalendarIcon from "@material-ui/icons/CalendarTodayTwoTone";
 import StarRateIcon from "@material-ui/icons/StarRate";
+import AddToQueue from '@material-ui/icons/AddToQueue';
 // import IconButton from "@material-ui/core/IconButton";
 import Grid from "@material-ui/core/Grid";
 import { MoviesContext } from "../../contexts/moviesContext";
+import { AvatarGroup } from "@material-ui/lab";
 
 const useStyles = makeStyles({
   card: { maxWidth: 345 },
@@ -23,7 +25,7 @@ const useStyles = makeStyles({
     backgroundColor: "rgb(255, 0, 0)",
   },
   avatar2: {
-    backgroundColor: "rgb(255, 0, 0)",
+    backgroundColor: "rgb(0, 0, 255)",
   },
 });
 
@@ -54,16 +56,22 @@ export default function MovieCard({ movie, action }) {
       <CardHeader
       className={classes.header}
       avatar={
-        movie.favourite ? (
+        (movie.favourite & movie.mustWatch) ? (
+          <AvatarGroup>
           <Avatar className={classes.avatar}>
             <FavoriteIcon />
           </Avatar>
-        ) : null
-      }
-      avatar2={
-        movie.mustWatch ? (
           <Avatar className={classes.avatar2}>
+            <AddToQueue />
+          </Avatar>
+          </AvatarGroup>
+        ) : movie.favourite ? (
+          <Avatar className={classes.avatar}>
             <FavoriteIcon />
+          </Avatar>
+        ) : movie.mustWatch ? (
+          <Avatar className={classes.avatar2}>
+            <AddToQueue />
           </Avatar>
         ) : null
       }

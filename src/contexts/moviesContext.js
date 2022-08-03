@@ -18,7 +18,6 @@ const MoviesContextProvider = (props) => {
     if (!mustWatch.includes(movie.id)) {
       let newMustWatch = [...mustWatch, movie.id];
       setMustWatch(newMustWatch);
-      console.log(newMustWatch)
     }
   };
 
