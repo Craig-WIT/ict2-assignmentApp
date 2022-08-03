@@ -108,6 +108,7 @@ const SiteHeader = () => {
                 <NavLink
                   key={opt.label}
                   to={opt.path}
+                  style={{ textDecoration: 'none' }}
                   className={({ isActive }) =>
                   isActive ? classes.activeLink : classes.inactiveLink
                 }

@@ -109,7 +109,12 @@ export default function MovieCard({ movie, action }) {
         {action(movie)}
         <Link to={`/movies/${movie.id}`}>
           <Button variant="outlined" size="medium" color="primary">
-            More Info ...
+            Details ...
+          </Button>
+        </Link>
+        <Link to={`/similarMovies/${movie.id}`}>
+          <Button variant="outlined" size="medium" color="primary">
+            View similar ...
           </Button>
         </Link>
       </CardActions>
