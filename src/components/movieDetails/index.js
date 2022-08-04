@@ -11,6 +11,7 @@ import NavigationIcon from "@material-ui/icons/Navigation";
 import Fab from "@material-ui/core/Fab";
 import Drawer from "@material-ui/core/Drawer";
 import MovieReviews from '../movieReviews'
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   chipRoot: {
@@ -56,6 +57,13 @@ const MovieDetails = ( {movie}) => {
         {movie.overview}
       </Typography>
       <div className={classes.chipRoot}>
+      <Paper component="ul" className={classes.chipSet}>
+        <li>
+        <Link to={`/movieCast/${movie.id}`}>
+          <Chip label="View Actors" className={classes.chipLabel} color="primary" />
+        </Link>
+        </li>
+      </Paper>
       <Paper component="ul" className={classes.chipSet}>
         <li>
           <Chip label="Genres" className={classes.chipLabel} color="primary" />
