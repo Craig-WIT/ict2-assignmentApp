@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Navigate, Routes} from "react-router-dom";
 import HomePage from "./pages/homePage";
 import MoviePage from "./pages/movieDetailsPage";
-import FavouriteMoviesPage from "./pages/favouriteMoviesPage"; // NEW
+import FavouriteMoviesPage from "./pages/favouriteMoviesPage";
 import UpcomingMoviesPage from "./pages/upcomingMoviesPage";
 import MustWatchMoviesPage from "./pages/mustWatchMoviesPage";
 import MovieReviewPage from "./pages/movieReviewPage";
@@ -14,6 +14,7 @@ import MoviesContextProvider from "./contexts/moviesContext";
 import AddMovieReviewPage from './pages/addMovieReviewPage';
 import SimilarMoviesPage from './pages/similarMoviesPage';
 import CastPage from './pages/castPage';
+import ActorDetailsPage from './pages/actorDetailsPage';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -32,6 +33,7 @@ const App = () => {
         <SiteHeader />
         <MoviesContextProvider>
         <Routes>
+        <Route path="/actors/:id" element={<ActorDetailsPage/>} />
         <Route path="/reviews/form" element={<AddMovieReviewPage/>} />
         <Route path="/movies/favourites" element={<FavouriteMoviesPage/>}
         />

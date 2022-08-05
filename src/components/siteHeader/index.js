@@ -110,7 +110,7 @@ const SiteHeader = () => {
                   to={opt.path}
                   style={{ textDecoration: 'none' }}
                   className={({ isActive }) =>
-                  isActive ? classes.activeLink : classes.inactiveLink
+                  isActive ? classes.inactiveLink : classes.inactiveLink
                 }
                   color="inherit"
                   // onClick={() => handleMenuSelect(opt.path)}

@@ -59,13 +59,6 @@ const MovieDetails = ( {movie}) => {
       <div className={classes.chipRoot}>
       <Paper component="ul" className={classes.chipSet}>
         <li>
-        <Link to={`/movieCast/${movie.id}`}>
-          <Chip label="View Actors" className={classes.chipLabel} color="primary" />
-        </Link>
-        </li>
-      </Paper>
-      <Paper component="ul" className={classes.chipSet}>
-        <li>
           <Chip label="Genres" className={classes.chipLabel} color="primary" />
         </li>
         {movie.genres.map((g) => (
@@ -85,6 +78,13 @@ const MovieDetails = ( {movie}) => {
           label={`${movie.vote_average} (${movie.vote_count}`}
         />
         <Chip label={`Released: ${movie.release_date}`} />
+      </Paper>
+      <Paper component="ul" className={classes.chipSet}>
+        <li>
+        <Link to={`/movieCast/${movie.id}`}>
+          <Chip label="View Actors" className={classes.chipLabel} color="primary" />
+        </Link>
+        </li>
       </Paper>
       </div>
       {/* New */}
