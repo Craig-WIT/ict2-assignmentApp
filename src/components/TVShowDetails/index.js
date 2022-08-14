@@ -75,8 +75,8 @@ const TVShowDetails = ( {TVShow}) => {
       </Paper>
       <Paper component="ul" className={classes.chipSet}>
         <li>
-        <Link to={`/TVShowSeasons/${TVShow.id}`}>
-          <Chip label="View Seasons" className={classes.chipLabel} color="primary" />
+        <Link to={`/TVShowCast/${TVShow.id}`}>
+          <Chip label="View Cast" className={classes.chipLabel} color="primary" />
         </Link>
         </li>
       </Paper>

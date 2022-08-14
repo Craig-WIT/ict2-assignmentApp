@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import React from "react";
+import Chip from "@material-ui/core/Chip";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
@@ -50,25 +51,25 @@ export default function TVCard({ TVShow }) {
           <Grid item xs={6}>
             <Typography variant="h6" component="p">
               <CalendarIcon fontSize="small" />
-              {TVShow.first_air_date}
+              <Chip label={TVShow.first_air_date} className={classes.chipLabel} color="primary" />
             </Typography>
           </Grid>
           <Grid item xs={6}>
             <Typography variant="h6" component="p">
               <StarRateIcon fontSize="small" />
-              {"  "} {TVShow.vote_average}{" "}
+              <Chip label={TVShow.vote_average} className={classes.chipLabel} color="primary" />
             </Typography>
           </Grid>
         </Grid>
       </CardContent>
       <CardActions disableSpacing>
         <Link to={`/TVShows/${TVShow.id}`}>
-          <Button variant="outlined" size="medium" color="primary">
+          <Button variant="contained" size="small" color="primary">
             Details ...
           </Button>
         </Link>
         <Link to={`/similarTVShows/${TVShow.id}`}>
-          <Button variant="outlined" size="medium" color="primary">
+          <Button variant="contained" size="small" color="primary">
             View similar ...
           </Button>
         </Link>

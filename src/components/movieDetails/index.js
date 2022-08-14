@@ -82,7 +82,7 @@ const MovieDetails = ( {movie}) => {
       <Paper component="ul" className={classes.chipSet}>
         <li>
         <Link to={`/movieCast/${movie.id}`}>
-          <Chip label="View Actors" className={classes.chipLabel} color="primary" />
+          <Chip label="View Cast" className={classes.chipLabel} color="primary" />
         </Link>
         </li>
       </Paper>

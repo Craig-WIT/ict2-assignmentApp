@@ -82,7 +82,7 @@ export default function CastCard({ cast }) {
       </CardContent>
       <CardActions disableSpacing>
         <Link to={`/actors/${cast.id}`}>
-          <Button variant="outlined" size="medium" color="primary">
+          <Button variant="contained" size="small" color="primary">
             Details ...
           </Button>
         </Link>

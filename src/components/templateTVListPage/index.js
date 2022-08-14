@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) =>  ({
   },
 }));
 
-function TVListPageTemplate({ TVShows, name }) {
+function TVListPageTemplate({ TVShows, title }) {
   const classes = useStyles();
   const [nameFilter, setNameFilter] = useState("");
   //const [genreFilter, setGenreFilter] = useState("0");
@@ -45,7 +45,7 @@ function TVListPageTemplate({ TVShows, name }) {
     <>
     <Grid container className={classes.root}>
       <Grid item xs={12}>
-        <Header name={name} />
+        <Header title={title} />
       </Grid>
       <Grid item container spacing={5}>
           <TVList TVShows={displayedTV} />

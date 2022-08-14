@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
 const Header = (props ) => {
   const navigate = useNavigate();
   const classes = useStyles();
-  const name = props.name
+  const title = props.title
   return (
     <Paper component="div" className={classes.root}>
       <IconButton aria-label="go back"  onClick={() => navigate(-1)}>
@@ -28,7 +28,7 @@ const Header = (props ) => {
       </IconButton>
 
       <Typography variant="h4" component="h3">
-        {name}
+        {title}
       </Typography>
       <IconButton aria-label="go forward"  onClick={() => navigate(1)}>
         <ArrowForwardIcon color="primary" fontSize="large" />
