@@ -14,6 +14,7 @@ import { ReactQueryDevtools } from 'react-query/devtools';
 import MoviesContextProvider from "./contexts/moviesContext";
 import AddMovieReviewPage from './pages/addMovieReviewPage';
 import SimilarMoviesPage from './pages/similarMoviesPage';
+import SimilarTVShowsPage from './pages/similarTVShowsPage';
 import CastPage from './pages/castPage';
 import ActorDetailsPage from './pages/actorDetailsPage';
 import TVShowPage from './pages/TVShowDetailsPage';
@@ -50,6 +51,7 @@ const App = () => {
         <Route path="/TVShows/:id" element={<TVShowPage/>} />
         <Route path="/movieCast/:id" element={<CastPage/>} />
         <Route path="/similarMovies/:id" element={<SimilarMoviesPage/>} />
+        <Route path="/similarTVShows/:id" element={<SimilarTVShowsPage/>} />
         <Route path="/" element={<HomePage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
