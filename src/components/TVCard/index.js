@@ -33,7 +33,7 @@ export default function TVCard({ TVShow }) {
       className={classes.header}
       title={
         <Typography variant="h5" component="p">
-          {TVShow.title}{" "}
+          {TVShow.name}{" "}
         </Typography>
       }
     />
@@ -62,12 +62,12 @@ export default function TVCard({ TVShow }) {
         </Grid>
       </CardContent>
       <CardActions disableSpacing>
-        <Link to={`/TV/${TVShow.id}`}>
+        <Link to={`/TVShows/${TVShow.id}`}>
           <Button variant="outlined" size="medium" color="primary">
             Details ...
           </Button>
         </Link>
-        <Link to={`/similarTV/${TVShow.id}`}>
+        <Link to={`/similarTVShows/${TVShow.id}`}>
           <Button variant="outlined" size="medium" color="primary">
             View similar ...
           </Button>
