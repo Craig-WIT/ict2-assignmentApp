@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import React, { useContext  } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
+import Chip from "@material-ui/core/Chip";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
@@ -17,6 +18,10 @@ import AddToQueue from '@material-ui/icons/AddToQueue';
 import Grid from "@material-ui/core/Grid";
 import { MoviesContext } from "../../contexts/moviesContext";
 import { AvatarGroup } from "@material-ui/lab";
+import AddToFavouritesIcon from '../cardIcons/addToFavourites'
+import RemoveFromFavouritesIcon from '../cardIcons/removeFromFavourites'
+import AddToMustWatchIcon from '../cardIcons/addToMustWatch'
+import RemoveFromMustWatchIcon from '../cardIcons/removeFromMustWatch'
 
 const useStyles = makeStyles({
   card: { maxWidth: 345 },
@@ -29,7 +34,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function MovieCard({ movie, action }) {
+export default function MovieCard({ movie }) {
   const classes = useStyles();
   const { favourites } = useContext(MoviesContext);
   const { mustWatch } = useContext(MoviesContext);
@@ -94,27 +99,32 @@ export default function MovieCard({ movie, action }) {
           <Grid item xs={6}>
             <Typography variant="h6" component="p">
               <CalendarIcon fontSize="small" />
-              {movie.release_date}
+              <Chip label={movie.release_date} className={classes.chipLabel} color="primary" />
             </Typography>
           </Grid>
           <Grid item xs={6}>
             <Typography variant="h6" component="p">
               <StarRateIcon fontSize="small" />
-              {"  "} {movie.vote_average}{" "}
+              <Chip label={movie.vote_average} className={classes.chipLabel} color="primary" />
             </Typography>
           </Grid>
         </Grid>
       </CardContent>
       <CardActions disableSpacing>
-        {action(movie)}
+        
+        {!movie.favourite ? <AddToFavouritesIcon movie={movie}/> : null}
+        {movie.favourite ? <RemoveFromFavouritesIcon movie={movie}/> : null}
+        {!movie.mustWatch ? <AddToMustWatchIcon movie={movie}/> : null}
+        {movie.mustWatch ? <RemoveFromMustWatchIcon movie={movie}/> : null}
+
         <Link to={`/movies/${movie.id}`}>
           <Button variant="contained" size="small" color="primary">
-            Details ...
+            Details
           </Button>
         </Link>
         <Link to={`/similarMovies/${movie.id}`}>
           <Button variant="contained" size="small" color="primary">
-            View similar ...
+            View similar
           </Button>
         </Link>
       </CardActions>

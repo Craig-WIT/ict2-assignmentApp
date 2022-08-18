@@ -12,7 +12,7 @@ const CastTVShowPage = (props) => {
   const {  data: TVShow}  = useQuery(["TVShow", { id: id }], getTVShow)
 
   const TVShowName = TVShow.name
-  const header = TVShowName + " : TVShow Cast"
+  const header = TVShowName + " : TV Show Cast"
 
   if (isLoading) {
     return <Spinner />

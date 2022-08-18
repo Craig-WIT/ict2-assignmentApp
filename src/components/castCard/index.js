@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import React from "react";
+import Chip from "@material-ui/core/Chip";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
@@ -26,25 +27,6 @@ const useStyles = makeStyles({
 
 export default function CastCard({ cast }) {
   const classes = useStyles();
-  //const { favourites } = useContext(MoviesContext);
-  //const { mustWatch } = useContext(MoviesContext);
-
-  //if (favourites.find((id) => id === movie.id)) {
-    //movie.favourite = true;
-  //} else {
-    //movie.favourite = false
-  //}
-
-  //if (mustWatch.find((id) => id === movie.id)) {
-    //movie.mustWatch = true;
-  //} else {
-    //movie.mustWatch = false
-  //}
-
-  // const handleAddToFavourite = (e) => {
-  //  e.preventDefault();
-  //  addToFavourites(movie);
-  // };
 
   return (
     <Card className={classes.card}>
@@ -69,13 +51,13 @@ export default function CastCard({ cast }) {
           <Grid item xs={6}>
             <Typography variant="h6" component="p">
               <CalendarIcon fontSize="small" />
-              {cast.character}
+              <Chip label={cast.character} className={classes.chipLabel} color="primary" />
             </Typography>
           </Grid>
           <Grid item xs={6}>
             <Typography variant="h6" component="p">
               <StarRateIcon fontSize="small" />
-              {"  "} {cast.popularity}{" "}
+              <Chip label={cast.popularity} className={classes.chipLabel} color="primary" />
             </Typography>
           </Grid>
         </Grid>
@@ -83,7 +65,7 @@ export default function CastCard({ cast }) {
       <CardActions disableSpacing>
         <Link to={`/actors/${cast.id}`}>
           <Button variant="contained" size="small" color="primary">
-            Details ...
+            Details
           </Button>
         </Link>
       </CardActions>

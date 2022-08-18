@@ -65,12 +65,12 @@ export default function TVCard({ TVShow }) {
       <CardActions disableSpacing>
         <Link to={`/TVShows/${TVShow.id}`}>
           <Button variant="contained" size="small" color="primary">
-            Details ...
+            Details
           </Button>
         </Link>
         <Link to={`/similarTVShows/${TVShow.id}`}>
           <Button variant="contained" size="small" color="primary">
-            View similar ...
+            View similar
           </Button>
         </Link>
       </CardActions>

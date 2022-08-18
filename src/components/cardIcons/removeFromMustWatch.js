@@ -1,10 +1,20 @@
 import React, { useContext } from "react";
+import { makeStyles } from "@material-ui/core/styles";
 import IconButton from "@material-ui/core/IconButton";
-import DeleteIcon from "@material-ui/icons/Delete";
+import MustWatchIcon from "@material-ui/icons/PlaylistAdd";
 import { MoviesContext } from "../../contexts/moviesContext";
+
+const useStyles = makeStyles({
+  favourite: { 
+    backgroundColor: "rgb(255, 255, 255)",
+    borderRadius: 10,
+    color: "blue"
+  },
+});
 
 const RemoveFromMustWatchIcon = ({ movie }) => {
   const context = useContext(MoviesContext);
+  const classes = useStyles();
 
   const handleRemoveFromMustWatch = (e) => {
     e.preventDefault();
@@ -15,7 +25,7 @@ const RemoveFromMustWatchIcon = ({ movie }) => {
       aria-label="remove from favorites"
       onClick={handleRemoveFromMustWatch}
     >
-      <DeleteIcon color="primary" fontSize="large" />
+      <MustWatchIcon className={classes.favourite} fontSize="large" />
     </IconButton>
   );
 };
