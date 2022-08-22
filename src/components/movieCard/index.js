@@ -51,11 +51,6 @@ export default function MovieCard({ movie }) {
     movie.mustWatch = false
   }
 
-  // const handleAddToFavourite = (e) => {
-  //  e.preventDefault();
-  //  addToFavourites(movie);
-  // };
-
   return (
     <Card className={classes.card}>
       <CardHeader
@@ -81,7 +76,7 @@ export default function MovieCard({ movie }) {
         ) : null
       }
       title={
-        <Typography variant="h5" component="p">
+        <Typography variant="h6" component="p">
           {movie.title}{" "}
         </Typography>
       }
