@@ -50,20 +50,36 @@ New routes have been added per the below:
 
 ### Views/Pages.
 
-[ For each view in your app, show a screenshot and caption - only new/modified ones in the case of the Movies Fan app. If necessary, use multiple screenshots to cover a view's full capability.
+Screenshots of new or modified views per the below:
 
-e.g.
->Added group avatars for films that are both Favourite and Must Watch. 
+>Added group avatars for films that are both Favourite and Must Watch
+
 ![][d1]
 
 >Added toggle to Favourite and Must Watch directly on Movie Card - icons change colour depending on tag
+
 ![][d2]
 
 >Added similar Movies page with filtering
 ![][d3]
 
->Shows detailed information on a specific movie
-![][detail]
+>Added view Cast option to Movie details
+
+![][d4]
+![][d5]
+
+>Added Cast list with filtering
+
+![][d6]
+
+>Added Cast detail page
+
+![][d7]
+
+>Added Popular and Similar TV Shows with filtering
+
+![][d8]
+![][d9]
 
 
 ### Component catalogue.
@@ -109,5 +125,11 @@ platform your app uses (e.g. TMDB lists, Firestore) and itemize the data it pers
 [d1]: ./public/Favourite_MustWatch.JPG
 [d2]: ./public/Toggle.JPG
 [d3]: ./public/Similar.JPG
+[d4]: ./public/viewCastMovie.JPG
+[d5]: ./public/viewCastTV.JPG
+[d6]: ./public/castList.JPG
+[d7]: ./public/castDetail.JPG
+[d8]: ./public/discoverTV.JPG
+[d9]: ./public/SimilarTV.JPG
 [caching]: ./public/caching.png
 [stories]: ./public/stories.png
