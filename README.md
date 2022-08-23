@@ -126,8 +126,8 @@ List of TMDB server state:
 [d7]: ./public/castDetail.JPG
 [d8]: ./public/discoverTV.JPG
 [d9]: ./public/SimilarTV.JPG
-[caching]: ./public/cache.png
-[stories1]: ./public/stories1.png
-[stories2]: ./public/stories2.png
-[stories3]: ./public/stories3.png
-[stories4]: ./public/stories4.png
+[caching]: ./public/cache.JPG
+[stories1]: ./public/stories1.JPG
+[stories2]: ./public/stories2.JPG
+[stories3]: ./public/stories3.JPG
+[stories4]: ./public/stories4.JPG
