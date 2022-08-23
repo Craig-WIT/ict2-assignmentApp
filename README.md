@@ -61,11 +61,13 @@ Screenshots of new or modified views per the below:
 ![][d2]
 
 >Added similar Movies page with filtering
+
 ![][d3]
 
->Added view Cast option to Movie details
+>Added view Cast option to Movie details and TV Show details
 
 ![][d4]
+
 ![][d5]
 
 >Added Cast list with filtering
@@ -79,48 +81,41 @@ Screenshots of new or modified views per the below:
 >Added Popular and Similar TV Shows with filtering
 
 ![][d8]
+
 ![][d9]
 
 
 ### Component catalogue.
 
-[ Use the Storybook UI to highlight the new components for which you developed stories.]
-e.g.
+Storybook UI added for components per the below:
 
-![][stories]
+![][stories1]
+
+![][stories2]
+
+![][stories3]
+
+![][stories4]
 
 ## Caching.
 
-[ List the TMDB server state cached by the app. Include a screenshot(s) of the react-query dev tools to validate your list.]
+List of TMDB server state:
 
-e.g.
-+ Discover movies (pagination support)
-+ Movie details
- + etc
-+ etc
++ Popular TV
++ Cast List
++ Similar movies
++ Similar TV
++ Cast details
 
 ![][caching]
 
 ## Authentication (if relevant).
 
-[Briefly state how you implemented authentication for the app, e.g. basic, Firebase, etc. Also, list the routes that are private/protected.]
-
-e.g.
-+ /reviews/:id
-+ /movies/favourites
-
 ## Server-side persistence (if relevant)
-
-[ Specify the persistence 
-platform your app uses (e.g. TMDB lists, Firestore) and itemize the data it persists.]
 
 ## Additional features (if relevant),
 
-[Mention any additional user features of your app that may not be obvious from the previous sections, e.g. pagination, extended filtering/sorting, searching.]
-
 ## Independent learning (if relevant),
-
-[Briefly explain any aspects of your assignment work that required independent learning (i.e. not addressed in the lectures or labs) on your behalf., e.g. 3rd-party components, libraries, tools. Include source code references.]
 
 [d1]: ./public/Favourite_MustWatch.JPG
 [d2]: ./public/Toggle.JPG
@@ -131,5 +126,8 @@ platform your app uses (e.g. TMDB lists, Firestore) and itemize the data it pers
 [d7]: ./public/castDetail.JPG
 [d8]: ./public/discoverTV.JPG
 [d9]: ./public/SimilarTV.JPG
-[caching]: ./public/caching.png
-[stories]: ./public/stories.png
+[caching]: ./public/cache.png
+[stories1]: ./public/stories1.png
+[stories2]: ./public/stories2.png
+[stories3]: ./public/stories3.png
+[stories4]: ./public/stories4.png
