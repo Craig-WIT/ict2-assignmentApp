@@ -1,43 +1,66 @@
 # ICT Skills 2 Assignment.
 
-Name: [your name]
+Name: Craig Grehan
 
 ## Overview.
 
-[ A paragraph on your React app's concept followed by a bullet-point list of its feature set - only list new/modified features if you are expanding the Movies app. ]
+This React App is an extension of the Movies App which was developed as part of ICT2 labs. Features have been added and/or extended as per the below:
 
-e.g. 
-+ Feature 1
-+ Feature 2
-+ Feature 3
-+ etc
-+ etc
++ Added ability to remove a movie from Must Watch list
++ Added group avatars if a film is tagged as both a Favourite and Must Watch
++ Added link to Similar Movies from the Home page
++ Added link to Cast list from the Movie Details page
++ Added filter on Cast list
++ Added more Detail to Cast list header (i.e passed name of Movie/ TV Show)
++ Added link to Actor Details from the Cast list page
++ Added Popular TV Shows page
++ Added link to Similar TV Shows
++ Added TV Show Details
++ Added link to Cast list of TV Shows
++ Added toggle effect on Favourite and Must Watch buttons
++ Restyled some of the website pages
 
 ## Setup requirements.
 
-[ Briefly state (to a third party) the setup steps necessary to run your app/client locally, e.g. .env and any other config files.]
+The application files can be cloned from GitHub repo:
+
+https://github.com/Craig-WIT/ict2-assignmentApp
+
+Navigate to the 'src' folder and run 'npm install'.
+
+Register with TMDB to receive an API key - update the '.env' with unqiue API key.
+
+Run 'npm start' to launch the application locally.
+
+Run 'npm run storybook' to launch storybook components.
 
 ## App Design.
 
 ### Routing/Navigation.
 
-[List the set of routes your app supports - only mention new instances if you expanded the Movies Fan app. State the view linked with each route.] 
+New routes have been added per the below:
 
-e.g.
-+ /movies/:id - detailed information on a specific movie.
-+ /movies/upcoming - lists movies soon to be shown in cinemas.
-+ etc.
-+ etc.
++ /actors/:id - detailed information on a specific cast member (actor).
++ /tv/popular - list of most Popular TV Shows
++ /TVShows/:id - detailed information on a specific TV Show.
++ /movieCast/:id - list of Movie cast/characters
++ /TVShowCast/:id - list of TV Show cast/characters
++ /similarMovies/:id - list of Similar Movies
++ /similarTVShows/:id - list of Similar TV Shows
 
 ### Views/Pages.
 
 [ For each view in your app, show a screenshot and caption - only new/modified ones in the case of the Movies Fan app. If necessary, use multiple screenshots to cover a view's full capability.
 
 e.g.
->Lists movies from the Discover endpoint. Filtering on title and genre attributes is supported.
+>Added group avatars for films that are both Favourite and Must Watch. 
 ![][d1]
 
+>Added toggle to Favourite and Must Watch directly on Movie Card - icons change colour depending on tag
 ![][d2]
+
+>Added similar Movies page with filtering
+![][d3]
 
 >Shows detailed information on a specific movie
 ![][detail]
@@ -83,8 +106,8 @@ platform your app uses (e.g. TMDB lists, Firestore) and itemize the data it pers
 
 [Briefly explain any aspects of your assignment work that required independent learning (i.e. not addressed in the lectures or labs) on your behalf., e.g. 3rd-party components, libraries, tools. Include source code references.]
 
-[d1]: ./public/profile.png
-[d2]: ./public/discover2.png
-[detail]: ./public/detail.png
+[d1]: ./public/Favourite_MustWatch.JPG
+[d2]: ./public/Toggle.JPG
+[d3]: ./public/Similar.JPG
 [caching]: ./public/caching.png
 [stories]: ./public/stories.png
